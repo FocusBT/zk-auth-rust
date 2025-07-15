@@ -1,0 +1,41 @@
+# Cargo
+/target/
+**/*.rs.bk
+**/*.rs.orig
+Cargo.lock
+Cargo.toml.orig
+Cargo.toml.bk
+
+# Rust
+*.rs.bk
+*.rs.orig
+
+# Build artifacts
+*.rlib
+*.d
+*.o
+*.so
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.a
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Other
+*.log
+*.cache
+*.tmp
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock

@@ -105,10 +105,10 @@ function runAutocannon (opts) {
     secretHex  = reg.data.secret;
     commitment = reg.data.commitment;
 
-    const prf = await axios.post(`${BASE_URL}/proof`, { secret_hex: secretHex, commitment });
+    const prf = await axios.post(`${BASE_URL}/generate-proof`, { secret_hex: secretHex, commitment });
     proof = prf.data.proof;
 
-    const verResp = await axios.post(`${BASE_URL}/verify`, { commitment, proof });
+    const verResp = await axios.post(`${BASE_URL}/verify-proof`, { commitment, proof });
     if (!verResp.data.valid) {
       throw new Error('Initial verification failed; proof or commitment invalid');
     }
@@ -135,7 +135,7 @@ function runAutocannon (opts) {
       name     : 'generateProof',
       requests : [{
         method : 'POST',
-        path   : '/proof',
+        path   : '/generate-proof',
         headers: { 'Content-Type': 'application/json' },
         body   : JSON.stringify({ secret_hex: secretHex, commitment })
       }]
@@ -144,7 +144,7 @@ function runAutocannon (opts) {
       name     : 'verifyProof',
       requests : [{
         method : 'POST',
-        path   : '/verify',
+        path   : '/verify-proof',
         headers: { 'Content-Type': 'application/json' },
         body   : JSON.stringify({ commitment, proof })
       }]

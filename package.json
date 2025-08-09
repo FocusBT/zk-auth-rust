@@ -11,6 +11,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.3",
   "dependencies": {
-    "circomlib": "^2.0.5"
+    "autocannon": "^8.0.0",
+    "axios": "^1.11.0",
+    "circomlib": "^2.0.5",
+    "pidusage": "^4.0.1"
   }
 }

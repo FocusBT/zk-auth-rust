@@ -55,7 +55,7 @@ User Data → Hash → Secret → Commitment → ZK Proof → Verification
 
 ```bash
 git clone https://github.com/FocusBT/zk-auth-rust.git
-cd zk-auth-gpy
+cd zk-auth-rust
 ```
 
 ### 2. Install Rust Dependencies

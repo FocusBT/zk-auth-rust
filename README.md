@@ -54,7 +54,7 @@ User Data → Hash → Secret → Commitment → ZK Proof → Verification
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/FocusBT/zk-auth-rust.git
 cd zk-auth-gpy
 ```
 
